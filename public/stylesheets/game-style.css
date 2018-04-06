@@ -1,0 +1,37 @@
+.playgames{
+   /* margin: 0px; */
+   padding: 130px 45px;
+   height: 600px;
+	background-image: url(../images/pixelated_bg600.gif);
+	max-width: 960px;
+	background-image: no-repeat;
+	background-image: cover;
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+section {
+	height: 175px;
+	background-color: #ffffff;
+	border-radius: 25px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+article{
+	color: #ffffff;
+	text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.jumbotron{
+	text-align:center;
+}
+.panel-heading{
+	text-align:center;
+
+}
+
+
+
+
