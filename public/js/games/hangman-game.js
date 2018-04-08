@@ -13,6 +13,7 @@ $(document).ready(function(){
 			
 			let userText = $('<span>')
 				.attr("id","user-text")
+				.text("Letter you are guessing: ");
 
 			let genButton = $('<button>')
 				.attr("id","generatePick")
@@ -21,6 +22,7 @@ $(document).ready(function(){
 				
 			let clearButton = $('<button>')
 				.attr("onclick","clearPick()")
+				.attr("id","startHangmanOver")
 				.text("Start Hangman Over")
 				.attr("class", "btn btn-warning btn-lg");
 			
@@ -28,7 +30,7 @@ $(document).ready(function(){
 				.attr("id","Winner")
 				.attr("class","row")
 				.attr("class", "hm-item")
-				.text("this is where we count your wins");
+				.text("Your wins: ");
 
 			let successText = $('<span>')
 				.attr("id", "successText")
@@ -40,7 +42,7 @@ $(document).ready(function(){
 				.attr("id", "messagePick")
 				.attr("class","row")
 				.attr("class", "hm-item")
-				.text("messagePick");
+				.text("Are you ready? Choose wisely.");
 
 			let hangWord = $('<span>')
 				.attr("id", "Hangman")
@@ -49,43 +51,17 @@ $(document).ready(function(){
 				.text("hangman word");
 
 			let badGuesses = $('<span>')
-				.attr("id", "badGuess")
+				.attr("id", "badGuess") 
 				.attr("class","row")
 				.attr("class", "hm-item")
-				.text("bad guesses");
+				.text("Failed letters: "); // bad guesses
 
 			let guessesLeft = $('<span>')
 				.attr("id", "remainingGuesses")
 				.attr("class","row")
 				.attr("class", "hm-item")
-				.text("guesses Left: ");
+				.text("Remaining guesses: "); // guesses Left
 			
-				// let userGuess = $('<section>')
-			// 	.attr("id", "user-number")
-			// 	.attr("class","number col-md-6")
-			// 	.append("<div class='panel-heading'><h3> Your Points </h3></div><div class='panel-body'><p>00</p></div>");
-		
-			// let crystalOne = $('<button>')
-			// 	.attr("id","crystal-one")
-			// 	.attr("class","crystal col-md-2 thumbnail")
-			// 	.append("<div class='panel-body'> <img id='crystal-img-one' class='crystalimg' src='https://www.crystalvaults.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/1/6/161017.jpg'></div><div id='crystal-caption-one' class='caption'><h6>Rutilated Quartz Point</h6></div>");
-		
-			// let crystalTwo = $('<button>')
-			// 	.attr("id","crystal-two")
-			// 	.attr("class","crystal col-md-2 thumbnail")
-			// 	.append("<div class='panel-body'> <img id='crystal-img-two' class='crystalimg' src='https://www.crystalvaults.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/1/6/161017.jpg'></div><div id='crystal-caption-two' class='caption'><h6>Rutilated Quartz Point</h6></div>");
-		
-			// let crystalThree = $('<button>')
-			// 	.attr("id","crystal-three")
-			// 	.attr("class","crystal col-md-2 thumbnail")
-			// 	.append("<div class='panel-body'> <img id='crystal-img-three' class='crystalimg' src='https://www.crystalvaults.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/1/6/161017.jpg'></div><div id='crystal-caption-three' class='caption'><h6>Rutilated Quartz Point</h6></div>");
-		
-			// let crystalFour = $('<button>')
-			// 	.attr("id","crystal-four")
-			// 	.attr("class","crystal col-md-2 thumbnail")
-			// 	.append("<div class='panel-body'> <img id='crystal-img-four' class='crystalimg' src='https://www.crystalvaults.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/1/6/161017.jpg'></div><div id='crystal-caption-four' class='caption'><h6>Rutilated Quartz Point</h6></div>");
-		
-		
 		
 			let game = $('<div>')
 							.height(600)
@@ -113,7 +89,7 @@ $(document).ready(function(){
 		//=======================================================
 //Setting up my variables
 //var theList = StevenUniverseChar;
-var randomComputerPick; 
+var randomComputerPick; // computerPick is the computer picking a random word from the array to be the answer for hangman
 var successPicks = [];
 var failPicks = [];
 var allPicks = [];
@@ -150,7 +126,7 @@ function clearPick(){
 		charFailArray = [];
 		spaceCounter = 0;
 		totalCharSuccess = 0;
-		totalGuesses =15;
+		totalGuesses = 15;
 		displayImg="";
 };
 
@@ -167,7 +143,7 @@ function generatePick(){
 		charFailArray = [];
 		spaceCounter = 0;
 		totalCharSuccess = 0;
-		totalGuesses =15;
+		totalGuesses = 15;
 		//successText.innerHTML = null;
 		//messagePick.innerHTML= null;
 
@@ -248,12 +224,12 @@ function generatePick(){
 					var userDisplay = document.getElementById("user-text");
 
 				//Ok so this is when you press any key on your keyboard
-				//TODO: Do you want to restrick it to only alpha numeric keys?
+				//TODO: Do you want to restrict it to only alpha numeric keys?
 					document.onkeyup = function(event) {
 						
 
 						var userPick = event.key.toUpperCase(); //This is where we define what the user picked and automatically makes it uppercase
-						userDisplay.textContent = userPick; // changes what is in the "user-text" span to whatever the user has just picked
+						userDisplay.textContent = 'Letter you are guessing:  ' + userPick; // changes what is in the "user-text" span to whatever the user has just picked
 						console.log(event.key);
 						console.log('-------------------');
 						console.log(allPicks); // empty because I havent pushed content to allPicks array yet
@@ -269,9 +245,9 @@ function generatePick(){
 						}
 						else{
 							var charSuccess = 0; //charSuccess will count the number of times that letter is in the code and counts it as one round of success.
-							//this is important because if charSuccess is greater than zero then its its a successful round, and if it less than zero you didn't match any letters
+							//this is important because if charSuccess is greater than zero then its a successful round, and if it less than zero you didn't match any letters
 							totalGuesses = totalGuesses -1;
-							console.log("These are total guesses :"+ totalGuesses)
+							console.log("These are total guesses :" + totalGuesses)
 							for (var i = 0; i < upperComputerPick.length; i++){
 								
 								if (userPick == upperComputerPick[i]){
@@ -333,19 +309,19 @@ function generatePick(){
 							console.log("this is the location of the user pick in all of the picks you've done before:" + repeat);
 
 							function updateScore() {
-								document.querySelector("#badGuess").innerHTML = "Fail Picks: " + failPicks;
+								document.querySelector("#badGuess").innerHTML = "Failed letters: " + failPicks;
 							}
 
 							updateScore();
 
 							function Winner() {
-								$("#Winner").text(userWins);
+								$("#Winner").text('Your wins:  '+ userWins);
 							}
 
 							Winner();
 
 							function guessesLeft() {
-								$("#guessesLeft").text(totalGuesses);
+								$("#remainingGuesses").text('Remaining Guesses: ' + totalGuesses);
 								
 							}
 
@@ -362,9 +338,10 @@ function generatePick(){
 						hangDisplay.appendChild(newLetterDiv);
 					};
 
-				if (totalGuesses < 0){
+				// This Modal will alert you with the answer when you run out of guesses.
+				if (totalGuesses < 1){ // 1 is here instead of 0 so that the remaining guesses does not show -1 when you run out of all of them.
 					$(".modal-title").text("Hangman");
-					$(".modal-text").text("You've ran out of guesses"+ computerPick);
+					$(".modal-text").text("Sorry, you've ran out of guesses.  The answer was "+ computerPick);
 					$("#game-modal").modal();
 					//alert("Sorry, you've ran out of guesses. The answer was: "+ computerPick);
 					clearPick();	
@@ -375,21 +352,21 @@ function generatePick(){
 					$(".modal-text").text("You've won!");
 					var userId = location.search.split("=") || [0, 1];
 					userId = userId[1];
-					var link = "/lvl/1?ch=1";
+					var link = "/lvl/1?ch=1"; //change this link
 					function redirectLink() {
 						if(userId) {
-						  window.location.href = "/lvl/4?ch="+userId;
+						  window.location.href = "/lvl/4?ch="+userId; // change this link too?
 						} else {
 						  window.location.href = link;
 						}
 					  };
 					  //redirectLink();
 					  
-					  $(document).on("click", "#continue", redirectLink);
+					  $(document).on("click", "#continue", redirectLink); // #continue links to a route with modal after you win, this needs to be fixed, could the game restart here?
 					  $("#game-modal").modal();
 					//alert("you've won!");
 					userWins = userWins +1;
-					console.log("Youve Won "+ userWins+" times");
+					console.log("You've Won "+ userWins+" times");
 					console.log(emptyCharacters - spaceCounter == totalCharSuccess);
 							function successText() {
 								$("#successText").text(computerPick);
@@ -407,37 +384,19 @@ function generatePick(){
 
 };
 
+// answers to hangman
 StevenUniverseChar = [
-"Rose Quartz",
-"Pearl",
-"Amethyst",
-"Ruby",
-"Sapphire",
-"Peridot",
-"Bismuth",
-"Yellow Diamond",
-"Blue Diamond",
-"Pink Diamond",
-"Hessonite",
-"Aquamarine",
-"Topazes",
-"Peridot",
-"Jasper",
-"Holy Blue Agate",
-"Zircons",
-"Centipeetle Mother",
-"Garnet",
-"Opal",
-"Sugilite",
-"Alexandrite",
-"Rainbow Quartz",
-"Sardonyx",
-"Stevonnie",
-"Smoky Quartz",
-"Malachite",
-"Fluorite",
-"Rhodonite"]
+"Javascript",
+"HTML",
+"cascading",
+"hello world",
+"coffee",
+"play",
+"mongoose",
+"databases"
+]
 
+// connected to answers for hangman, fix this
 StevenUniverseImg = [
 "Rose_Quartz_-_With_Weapon.png",
 "Current_Pearl_Request.png",

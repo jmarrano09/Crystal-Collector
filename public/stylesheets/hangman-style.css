@@ -1,4 +1,8 @@
-/* ============================  TRIVIA GAME  ========================== */
+/* ============================  HANGMAN GAME  ========================== */
+
+* {
+    box-sizing: border-box;
+}
 
 h3 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -12,12 +16,12 @@ h3 {
 }
 
 .bgTest {
-    background-image: url(../images/pixelated_bg3.gif);
+    background-image: url(../images/pixelated_bg5.gif);
     /* background-image: url(../images/dust_scratches.png); */
     height: 600px;
     width: 960px;
     background-repeat: no-repeat;
-    background-size: cover;
+    /* background-size: cover; */
     float: none;
     /* Positioning */
     margin: 0 auto;
@@ -29,13 +33,89 @@ h3 {
     padding: 10px;
     box-shadow: black, 2px;
     border-radius: 20px;
+    text-align: center;
 }
 
 .hm-item div {
     background-color: white;
-    padding: 10px;
+    /* padding: 10px; */
     box-shadow: black, 2px;
     border-radius: 20px;
     width: 20px;
     margin: auto;
+    display: inline-block;
+    position: relative;
+}
+
+
+#user-text {
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+    position: absolute;
+    font-size: 20px;
+    margin-left: -461px;
+    margin-top: -114px;
+    box-shadow: black, 2px;
+    font-size: 14px;
+}
+
+#Hangman {
+    background-color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+    border-radius: 20px;
+    position: absolute;
+    margin-left: -189px;
+    margin-top: 289px;
+    font-size: 20px;
+    width: 400px;
+}
+
+#Winner {
+    position: absolute;
+    margin-left: -23px;
+    margin-top: 35px;
+}
+
+#generatePick {
+    margin-top: 345px;
+    position: absolute;
+    margin-left: -193px;
+
+}
+
+#startHangmanOver {
+    margin-top: 345px;
+    position: absolute;
+    margin-left: 60px;
+}
+
+#messagePick {
+    position: absolute;
+    margin-left: 219px;
+    z-index: 10;
+    width: 132px;
+
+}
+
+#badGuess {
+    position: absolute;
+    margin-left: -461px;
+    margin-top: -65px;
+}
+
+#remainingGuesses {
+    position: absolute;
+    margin-left: -461px;
+    margin-top: -15px;
+
+}
+
+#speechBubble{
+    position: absolute;
+    margin-left: 646px;
+    margin-top: -534px;
 }

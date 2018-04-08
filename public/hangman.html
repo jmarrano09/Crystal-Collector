@@ -17,7 +17,7 @@
             <div class="navbar-header">
 
                 <div class="mainTitle">
-                    <h1>Crystal Collector</h1>
+                    <h1>Hangman</h1>
                 </div>
             </div>
             <header>
@@ -27,13 +27,13 @@
                         <a class="nav-links" href="boss.html">Boss</a>
                     </li>
                     <li>
-                        <a class="nav-links" href="hangman.html">Hangman</a>
+                        <a class="nav-links active" href="hangman.html">Hangman</a>
                     </li>
                     <li>
                         <a class="nav-links" href="trivia.html">Trivia</a>
                     </li>
                     <li>
-                        <a class="nav-links active" href="crystal.html">Crystal</a>
+                        <a class="nav-links" href="crystal.html">Crystal</a>
                     </li>
                 </ul>
             </header>
@@ -42,10 +42,9 @@
     <div class="container">
         <div class="row center">
             <div class="instructions">
-                In this game, the player will have to guess the random number, but the values are hidden.  Each crystal is a button with a value.
-                When the player clicks on a crystal, it will add a specific amount of points to the player's total score.
-                The player's score will update based on what they click.  To win, the player's score must match the score of the random number.
-                The player loses if their score goes above the random number.  The game restarts whenever the player wins or loses.
+                This is a simple game of Hangman.  You've played Hangman before, right?  Well, in this game, the player 
+                chooses letters to guess the hidden word.  To play, click on the "Click to generation Hangman Choice" button, and then,
+                simply type a letter from your keyboard.  
                 Good Luck!
             </div>
         </div>
@@ -55,7 +54,12 @@
         <div class="row center">
             <div id="hangmangame"></div>
         </div>
+        <div id="speechBubble">
+            <img src="images/pixel-speech.png" alt="pixel bubble" height="200" width="200">
+        </div>
     </div>
+
+    
     <!-- Modal -->
     <div class="modal fade" id="game-modal" role="dialog">
         <div class="modal-dialog">
@@ -76,8 +80,17 @@
     
         </div>
     </div>
+
+     <!-- FOOTER -->
+     <footer>
+        <div class="socialmedia">
+            <a href="https://www.linkedin.com/in/jess-m-5206ba38/"><img src="images/linkedin2.png" alt="linkedin"></a>
+            <a href="https://github.com/jmarrano09"><img src="images/github.png" alt="github"></a>
+            <a href="https://stackoverflow.com/"><img src="images/stackoverflow2.png" alt="stackoverflow"></a>
+        </div>
+    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
-    <script src="../js/games/hangman-game.js"></script>
+    <script src="js/games/hangman-game.js"></script>
 </body>
