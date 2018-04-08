@@ -18,7 +18,7 @@
 - HTML, CSS, Javascript, Modal, Bootstrap
 
 ## Live link:
-- link: https://jmarrano09.github.io/Crystal-Collector/
+- link: https://jmarrano09.github.io/Crystal-Collector/public/crystal.html
 
 ## Additional:
 - Be sure to further check out this game out in The Ultimate Game!
