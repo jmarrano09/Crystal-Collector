@@ -11,11 +11,11 @@ $(document).ready(function() {
     }
   });
 
-  function showOpeningModal(){
-    $(".modal-title").text("Medieval Web Dev Trivia");
-    $(".modal-text").text("How sinister! You've made it to the troll, but the tables have turned. You're going to be tested about your Web Development knowledge by the troll. YES! The Technology from the FUTURE!");
-    $("#game-modal").modal("toggle");
-  }
+  // function showOpeningModal(){
+  //   $(".modal-title").text("Medieval Web Dev Trivia");
+  //   $(".modal-text").text("How sinister! You've made it to the troll, but the tables have turned. You're going to be tested about your Web Development knowledge by the troll. YES! The Technology from the FUTURE!");
+  //   $("#game-modal").modal("toggle");
+  // }
 
   var qArray;
   var right;
@@ -33,6 +33,9 @@ $(document).ready(function() {
   start: function() {
     $("#time").html("Time Remaining: " + questionTimer.time);
     counter = setInterval(questionTimer.count, 1000);
+    document.getElementById("time").style.background = "white"; //makes the background of these IDs white upon clicking the start button
+    document.getElementById("questions").style.background = "white";
+    document.getElementById("result").style.background = "white";
   },
   stop: function() {
         clearInterval(counter);
@@ -41,7 +44,13 @@ $(document).ready(function() {
         questionTimer.time--;
         $("#time").html("Time Remaining: " + questionTimer.time);
   },
+
+  // let userText = $('<span>')
+	// 			.attr("id","user-text")
+	// 			.text("Letter you are guessing: ");
+
 }
+
 
 function startTrivia() {
   qArray = [{
@@ -187,3 +196,14 @@ function advance() {
 startTrivia();
 showOpeningModal();
 });
+
+// CSS attributes only
+// function cssStyle() {
+//   document.getElementById("time").setAttribute("class", "timeAttribute"); 
+// };
+
+// cssStyle();
+
+// function myFunction() {
+//   document.getElementById("demo").style.background = "red";
+// }

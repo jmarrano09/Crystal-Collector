@@ -25,7 +25,7 @@
                 <ul>
                     <li>
 
-                        <a class="nav-links" href="boss.html">Boss</a>
+                        <a class="nav-links" href="fight.html">Boss</a>
                     </li>
                     <li>
                         <a class="nav-links" href="hangman.html">Hangman</a>
@@ -36,6 +36,9 @@
                     <li>
                         <a class="nav-links" href="crystal.html">Crystal</a>
                     </li>
+                    <li>
+                        <a class="nav-links" href="#">Portfolios</a>
+                    </li>
                 </ul>
             </header>
     </nav>
@@ -43,20 +46,25 @@
     <div class="container">
         <div class="row center">
             <div class="bgTest">
-            
+
                 <div class="row-header">
                     <br>
                     <div id="time"></div>
                     <br>
                     <div id="questions"></div>
-                    <button class='button' id="answer0" value=0></button>
-                    <br>
-                    <button class='button' id="answer1" value=1></button>
-                    <br>
-                    <button class='button' id="answer2" value=2></button>
-                    <br>
-                    <button class='button' id="answer3" value=3></button>
-                    <br>
+
+                    <!-- answers -->
+                    <div class="answers"> 
+                        <button class='button' id="answer0" value=0></button>
+                        <!-- <br> -->
+                        <button class='button' id="answer1" value=1></button>
+                        <!-- <br> -->
+                        <button class='button' id="answer2" value=2></button>
+                        <!-- <br> -->
+                        <button class='button' id="answer3" value=3></button>
+                        <!-- <br> -->
+                    </div>
+
                     <div id="result"></div>
                 </div>
             </div>>
@@ -66,7 +74,7 @@
     <!-- Modal -->
     <div class="modal fade" id="game-modal" role="dialog">
         <div class="modal-dialog">
-    
+
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
@@ -80,21 +88,27 @@
                     <button type="button" id="continue" class="btn btn-default" data-dismiss="modal">Continue</button>
                 </div>
             </div>
-    
+
         </div>
     </div>
 
-     <!-- FOOTER -->
-     <footer>
+    <!-- FOOTER -->
+    <footer>
         <div class="socialmedia">
-            <a href="#"><img src="images/linkedin2.png" alt="linkedin"></a>
-            <a href="#"><img src="images/github.png" alt="github"></a>
-            <a href="#"><img src="images/stackoverflow2.png" alt="stackoverflow"></a>
+            <a href="#">
+                <img src="images/linkedin2.png" alt="linkedin">
+            </a>
+            <a href="#">
+                <img src="images/github.png" alt="github">
+            </a>
+            <a href="#">
+                <img src="images/stackoverflow2.png" alt="stackoverflow">
+            </a>
         </div>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-    crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
     <script src="js/games/trivia-game.js"></script>
 </body>
