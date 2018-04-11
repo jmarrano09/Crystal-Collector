@@ -41,6 +41,15 @@
                 </ul>
             </header>
     </nav>
+
+    <div class="container">
+        <div class="row center">
+            <div class="instructions">
+                Welcome to the BOSS LEVEL!  Attack and defend using potions against the Evil Boss Wizard!
+            </div>
+        </div>
+    </div>
+
     <div class="container">
 
         <!-- BOSS -->
@@ -48,38 +57,43 @@
             <div class="row">
                 <h1 class="text-center" style="color:white"></h1>
                 <div class="col-md-6 col-md-offset-6">
-                    <h2>Evil Boss Wizard</h2>
-                    <div>
+                    <!-- VILLIAN -->
+                    <div id="villian">
+                        <h2>Evil Boss Wizard</h2>
                         <img src="" class="img-responsive" id="boss-img">
+                        <div>HP:
+                            <span id="boss-hp"></span>
+                        </div>
                     </div>
-                    <div>HP:
-                        <span id="boss-hp"></span>
-                    </div>
+
                 </div>
             </div>
             <!-- CHARACTER -->
             <div class="row">
                 <div class="col-md-6 col-md-offset-1">
-                    <h2 id="char-name">Our Hero</h2>
-                    <div>
+                    <!-- HERO -->
+                    <div id="hero">
+                        <h2 id="char-name">Our Hero</h2>
                         <img src="" class="img-responsive" id="user-img">
+                        <div>HP:
+                            <span id="user-hp"></span>
+                        </div>
                     </div>
-                    <div>HP:
-                        <span id="user-hp"></span>
-                        <br/>
-                        <br/>
-                    </div>
+
                 </div>
             </div>
             <!-- ACTIONS -->
             <div class="row">
                 <div class="buttons col-md-6 col-md-offset-1">
+                    <!-- attack button -->
                     <button class="btn btn-default" id="attack">
                         <span class="glyphicon glyphicon-flash"></span> Attack</button>
+                    <!-- potion button -->
                     <button class="btn btn-default" id="potion">
                         <span class="glyphicon glyphicon-baby-formula"></span> Potion
                         <span class="badge" id="user-potions"></span>
                     </button>
+                    <!-- special button -->
                     <button class="btn btn-default" id="special">
                         <span class="glyphicon glyphicon-star-empty"></span> Special ability</button>
                 </div>
@@ -108,12 +122,18 @@
         </div>
     </div>
 
-     <!-- FOOTER -->
-     <footer>
+    <!-- FOOTER -->
+    <footer>
         <div class="socialmedia">
-            <a href="https://www.linkedin.com/in/jess-m-5206ba38/"><img src="images/linkedin2.png" alt="linkedin"></a>
-            <a href="https://github.com/jmarrano09"><img src="images/github.png" alt="github"></a>
-            <a href="https://stackoverflow.com/"><img src="images/stackoverflow2.png" alt="stackoverflow"></a>
+            <a href="https://www.linkedin.com/in/jess-m-5206ba38/">
+                <img src="images/linkedin2.png" alt="linkedin">
+            </a>
+            <a href="https://github.com/jmarrano09">
+                <img src="images/github.png" alt="github">
+            </a>
+            <a href="https://stackoverflow.com/">
+                <img src="images/stackoverflow2.png" alt="stackoverflow">
+            </a>
         </div>
     </footer>
 

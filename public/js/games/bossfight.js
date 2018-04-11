@@ -10,11 +10,14 @@ $(document).ready(function () {
     }
   });
 
-  function runModal() {
-    $("#modal-title").text("Game 4: Ultimate Boss Fight");
-    $("#modal-text").text("It's your final confrontation with the evil wizard, but it's very likely not everyone will walk away from the encounter. Use your potions and special skill wisely, and you'll come out ahead!");
-    $("#game-modal").modal("toggle");
-  }
+  // POP UP MODAL
+
+  // function runModal() {
+  //   $("#modal-title").text("Game 4: Ultimate Boss Fight");
+  //   $("#modal-text").text("It's your final confrontation with the evil wizard, but it's very likely not everyone will walk away from the encounter. Use your potions and special skill wisely, and you'll come out ahead!");
+  //   $("#game-modal").modal("toggle");
+  // }
+
   var user = {};
   function getUserStats() {
     if (userId) {
@@ -99,8 +102,9 @@ $(document).ready(function () {
   };
   //render sprite images on page
   function renderImage() {
-    bossImg.attr("src", boss.sprite).attr("style", "height:100px; width:100px;");
-    userImg.attr("src", user.sprite).attr("style", "height:100px; width:100px;");
+    //css attributes in javascript for these images
+    bossImg.attr("src", boss.sprite).attr("style", "height:100px; width:100px; margin: 0 auto;");
+    userImg.attr("src", user.sprite).attr("style", "height:100px; width:100px; margin: 0 auto;");
     userName.text(user.char_name);
   };
 
