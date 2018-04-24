@@ -18,9 +18,9 @@ a {
   color: black;
 }
 
-/* h2 { font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+h2 { font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
-} */
+}
 
 .navBG { 
   background-color: rgb(190, 76, 41);
@@ -209,6 +209,13 @@ footer {
   /* Visual */
   background: rgb(190, 76, 41);
   border-top: 8px solid firebrick;
+}
+/* 
+not working */
+div.footer-links a:link {
+  background-color: purple;
+  border-radius: 25px;
+  font-weight: 700;
 }
 
 /* for the social media icons */

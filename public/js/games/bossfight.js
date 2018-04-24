@@ -12,11 +12,12 @@ $(document).ready(function () {
 
   // POP UP MODAL
 
-  // function runModal() {
-  //   $("#modal-title").text("Game 4: Ultimate Boss Fight");
-  //   $("#modal-text").text("It's your final confrontation with the evil wizard, but it's very likely not everyone will walk away from the encounter. Use your potions and special skill wisely, and you'll come out ahead!");
-  //   $("#game-modal").modal("toggle");
-  // }
+  function runModal() {
+    $("#modal-title").text("Game 4: Ultimate Boss Fight");
+    $("#modal-text").text("It's your final confrontation with the evil wizard, but it's very likely not everyone will walk away from the encounter. Use your potions and special skill wisely, and you'll come out ahead!");
+    $("#game-modal").modal("toggle");
+    console.log("first modal");
+  }
 
   var user = {};
   function getUserStats() {
