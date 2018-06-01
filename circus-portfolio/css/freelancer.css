@@ -32,6 +32,16 @@ h8 {
   padding: 5px;
 }
 
+.resume {
+  height: 2000px;
+  width: 800px;
+  margin-left: -10%;
+}
+
+.jumbotron {
+  text-align: center;
+}
+
 
 header, img {
   border: black;
@@ -443,7 +453,7 @@ form .row:first-child .floating-label-form-group {
 }
 
 .copyright {
-  background-color: #1a252f;
+  background-color: rgb(80, 1, 80);
 }
 
 a {
