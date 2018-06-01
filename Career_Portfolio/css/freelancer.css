@@ -12,11 +12,27 @@ h6 {
   font-family: 'Montserrat';
 }
 
+h7 {
+  font-weight: 700;
+  font-family: 'Montserrat';
+  font-size: 22px;
+}
+
 /* where the profile pic is */
 header, img {
   border: black;
   border: solid;
   border: 5px;
+}
+
+.resume {
+  height: 3200px;
+  width: 800px;
+  margin-left: -10%;
+}
+
+.jumbotron {
+  text-align: center;
 }
 
 hr.star-light,
