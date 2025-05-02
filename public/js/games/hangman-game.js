@@ -288,13 +288,13 @@ $(document).ready(function () {
 				console.log("all the characters matched successfully:" + totalCharSuccess);
 				console.log(displayWord);
 				if (charSuccess > 1) {
-					message = "Yass Queen, you matched " + charSuccess + " letters!";
+					message = "You matched " + charSuccess + " letters!";
 				}
 				else if (charSuccess > 0) {
-					message = "Yass Queen, you matched " + charSuccess + " letter!";
+					message = "You matched " + charSuccess + " letter!";
 				}
 				else {
-					message = "Darn Girl, try again.";
+					message = "Dang wrong letter, try again.";
 					failPicks.push(userPick);
 				}
 
@@ -406,14 +406,14 @@ $(document).ready(function () {
 
 	// answers to hangman
 	StevenUniverseChar = [
-		"Javascript",
-		"HTML",
+		"You won",
+		"fox trot",
 		"cascading",
 		"hello world",
 		"coffee",
 		"play",
 		"mongoose",
-		"databases"
+		"horse"
 	]
 
 	// connected to answers for hangman, fix this

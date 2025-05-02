@@ -2,9 +2,9 @@
 
 * {
     box-sizing: border-box;
-}
-
-h3 {
+  }
+  
+  h3 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 50px;
     color: black;
@@ -13,42 +13,46 @@ h3 {
     width: 300px;
       padding: 10px;
     margin-left: 34.375%; */
-}
-
-.bgTest {
+  }
+  
+  .bgTest {
     background-image: url(../images/pixelated_bg5.gif);
-    /* background-image: url(../images/dust_scratches.png); */
+  
     height: 600px;
     width: 960px;
     background-repeat: no-repeat;
-    /* background-size: cover; */
+    /* filter: drop-shadow(1px 5px 24px #0000008f); */
+
+    border-radius: 5px;
+ 
     float: none;
     /* Positioning */
     margin: 0 auto;
     text-align: center;
-}
-
-.hm-item {
+    margin-bottom: 50px;
+    margin-top: 30px;
+  }
+  
+  .hm-item {
     background-color: white;
     padding: 10px;
-    box-shadow: black, 2px;
+  
     border-radius: 20px;
     text-align: center;
-}
-
-.hm-item div {
+  }
+  
+  .hm-item div {
     background-color: white;
-    /* padding: 10px; */
-    box-shadow: black, 2px;
+    display: inline-flex;
     border-radius: 20px;
     width: 20px;
     margin: auto;
-    display: inline-block;
-    position: relative;
-}
-
-
-#user-text {
+    /* display: inline-block;
+    position: relative; */
+  }
+  
+  
+  #user-text {
     background-color: white;
     padding: 10px;
     border-radius: 20px;
@@ -58,9 +62,9 @@ h3 {
     margin-top: -114px;
     box-shadow: black, 2px;
     font-size: 14px;
-}
-
-#Hangman {
+  }
+  
+  #Hangman {
     background-color: white;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -72,50 +76,82 @@ h3 {
     margin-top: 289px;
     font-size: 20px;
     width: 400px;
-}
-
-#Winner {
+  }
+  
+  #Winner {
     position: absolute;
     margin-left: -23px;
     margin-top: 35px;
-}
-
-#generatePick {
+  }
+  
+  #generatePick {
     margin-top: 345px;
     position: absolute;
-    margin-left: -193px;
-
-}
-
-#startHangmanOver {
+    margin-left: -300px;
+  
+  }
+  
+  #startHangmanOver {
     margin-top: 345px;
     position: absolute;
     margin-left: 60px;
-}
-
-#messagePick {
+  }
+  
+  #messagePick {
     position: absolute;
-    margin-left: 219px;
-    z-index: 10;
-    width: 132px;
-
-}
-
-#badGuess {
+    left: 730px;
+  
+    top: 300px;
+  
+    background: #fff;
+    border: 2px solid #333;
+    border-radius: 1rem;
+    padding: 1rem 1.5rem;
+    width: 200px;
+    font-size: 1rem;
+    color: #333;
+    margin: 3rem auto;
+  
+  }
+  
+  #messagePick::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 30%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border: 11px solid transparent;
+    border-top-color: #fff;
+   
+  }
+  
+  #messagePick::before {
+    content: "";
+    position: absolute;
+    bottom: -22px;
+    left: 30%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border: 11px solid transparent;
+    border-top-color: #333;
+  
+  }
+  
+  #badGuess {
     position: absolute;
     margin-left: -461px;
     margin-top: -65px;
-}
-
-#remainingGuesses {
+  }
+  
+  #remainingGuesses {
     position: absolute;
     margin-left: -461px;
     margin-top: -15px;
-
-}
-
-#speechBubble{
-    position: absolute;
-    margin-left: 646px;
-    margin-top: -534px;
-}
+  
+  }
+  
+  
+  

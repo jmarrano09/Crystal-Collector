@@ -77,10 +77,16 @@ article{
     background-repeat: no-repeat;
     background-size: cover;
 	float: none;
+    filter: drop-shadow(1px 5px 24px #0000008f);
+
+    border-radius: 5px;
+  
 	
     /* Positioning */
     margin: 0 auto;
     text-align: center;
+	margin-bottom: 50px;
+    margin-top: 30px;
 }
 
 
