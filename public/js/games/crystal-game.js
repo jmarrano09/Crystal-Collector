@@ -2,8 +2,8 @@ $(document).ready(function () {
 	const urlParams = new URLSearchParams(window.location.search);
 	const userId = urlParams.get('ch') || '1';
 	// Show the modal (Bootstrap 5 way)
-const gameModal = new bootstrap.Modal(document.getElementById('game-modal'));
-gameModal.show();
+// const gameModal = new bootstrap.Modal(document.getElementById('game-modal'));
+// gameModal.show();
 
   
 	// Update navigation links with userId

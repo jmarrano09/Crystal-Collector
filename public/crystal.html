@@ -1,26 +1,26 @@
 <!doctype html>
 
 <head>
-    <title>The Ultimate Game</title>
+    <title>Crystal Game</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-     <!-- Font Awesome icons (free version)-->
-     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-     <!-- Bootstrap CSS CDN -->
-<!-- Bootstrap 5 CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 
-     <link href="stylesheets/crystal-style.css" rel="stylesheet">
-     <link href="stylesheets/style.css" rel="stylesheet">
-     <!-- Added link to the jQuery Library -->
- 
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="stylesheets/style.css" rel="stylesheet">
+    <link href="stylesheets/crystal-style.css" rel="stylesheet">
+
+    <!-- Added link to the jQuery Library -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 </head>
 
 <body>
 
-   
+
     <nav class="navbar navbar-expand-lg navbar-dark  fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">My Games</a>
@@ -31,8 +31,8 @@
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                   
-                 
+
+
                     <li class="nav-item"><a class="nav-link active" href="crystal.html">Crystal</a></li>
                     <li class="nav-item"><a class="nav-link" href="trivia.html">Trivia</a></li>
                     <li class="nav-item"><a class="nav-link " href="hangman.html">Hangman</a></li>
@@ -42,21 +42,25 @@
         </div>
     </nav>
 
-    
 
 
-<br>
-<div class="container d-flex justify-content-center align-items-center full-height">
-    <div class="text-center">
-      <h3 class="display-4">Let's Play Crystal Collector</h3>
-      <p class="lead">     In this game, the player will have to guess the random number, but the values are hidden. Each crystal is a button with a
-        value. When the player clicks on a crystal, it will add a specific amount of points to the player's total
-        score. The player's score will update based on what they click. To win, the player's score must match the
-        score of the random number. The player loses if their score goes above the random number. The game restarts
-        whenever the player wins or loses. Good Luck!</p>
-   
+
+    <br>
+    <div class="container d-flex justify-content-center align-items-center full-height">
+        <div class="text-center">
+            <h3 class="display-4">Let's Play Crystal Collector</h3>
+            <p class="lead"> In this game, the player will have to guess the random number, but the values are hidden.
+                Each crystal is a button with a
+                value. When the player clicks on a crystal, it will add a specific amount of points to the player's
+                total
+                score. The player's score will update based on what they click. To win, the player's score must match
+                the
+                score of the random number. The player loses if their score goes above the random number. The game
+                restarts
+                whenever the player wins or loses. Good Luck!</p>
+
+        </div>
     </div>
-  </div>
 
 
 
@@ -68,35 +72,35 @@
                 <div class="row center">
                     <div id="crystalgame"></div>
                 </div>
-               
+
             </div>
         </div>
     </div>
 
-      
 
-  <!-- Game Over Modal -->
-<div class="modal fade" id="game-modal" tabindex="-1" aria-labelledby="gameModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content custom-modal">
-        <div class="modal-header">
-          <h5 class="modal-title" id="gameModalLabel">Game Over</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+    <!-- Game Over Modal -->
+    <div class="modal fade" id="game-modal" tabindex="-1" aria-labelledby="gameModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content custom-modal">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="gameModalLabel">Game Over</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Better luck next time!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Try Again</button>
+                </div>
+            </div>
         </div>
-        <div class="modal-body">
-          Better luck next time!
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Try Again</button>
-        </div>
-      </div>
     </div>
-  </div>
-  
-  
 
-     <!-- Footer -->
-     <footer class="text-white text-center text-lg-start p-3">
+
+
+    <!-- Footer -->
+    <footer class="text-white text-center text-lg-start p-3">
         <div class="container py-2 d-flex flex-column flex-md-row justify-content-between align-items-center">
             <span>&copy; Jess M. Design 2025</span>
             <div class="my-3">
@@ -110,13 +114,13 @@
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script> -->
 
- <!-- Bootstrap 5 JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 
     <script src="js/games/crystal-game.js"></script>
