@@ -1,231 +1,165 @@
 /* ============================  CRYSTAL GAME  ========================== */
 
-
- /* .playgames{
-	margin: 0px;
-	padding: 130px 45px;
-	height: 600px;
-    width: 960px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    float: none;
-    margin: 0 auto;
-    text-align: center;
-    margin-bottom: 50px;
-    margin-top: 30px;
-  } */
-   
-  /* .bgTest{
-	margin: 0px;
-	padding: 130px 45px;
-	height: 600px;
-    width: 960px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    float: none;
-    margin: 0 auto;
-    text-align: center;
-    margin-bottom: 50px;
-    margin-top: 30px;
-    background-repeat: no-repeat;
-    background-size: cover;
-  
-  } */
-
-  /* .bgTest {
-    background-image: url(../images/pixelated_bg600.gif);
-    height: 600px;
-    width: 960px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    float: none;
-    filter: drop-shadow(1px 5px 24px #0000008f);
-    border:solid 15px #555; 
-    box-shadow: 0px 0px 20px #999;
-    border-radius: 5px;
-    background-color: #212121;
-  
-    margin: 0 auto;
-    text-align: center;
-    margin-bottom: 50px;
-    margin-top: 30px;
-    
-} */
-
 #crystalgame {
-    background-image: url(../images/pixelated_bg600.gif);
-    height: 600px;
-    width: 960px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 30px auto 50px auto;
-    text-align: center;
-    position: relative;
+  background-image: url(../images/pixelated_bg600.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #212121;
+  border: solid 10px #555;
+  box-shadow: 0px 0px 20px #999;
+  border-radius: 5px;
+  max-width: 960px;
+  height: 600px;
+  margin: 30px auto 50px auto;
+  padding: 2rem;
+
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
+  grid-template-areas:
+    "c1 c2 c3 c4"
+    "random random user user";
+  gap: 1rem;
+  justify-items: center;
+  align-items: center;
 }
 
-  @media only screen and (max-width: 600px) {
-   
-    .bgTest{
-        margin: 0px;
-        /* padding: 130px 45px; */
-        height: 600px;
-        width: 400px;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-image: url(../images/pixelated_bg600.gif);
-        background-position: bottom left;
-        margin: 0 auto;
-        text-align: center;
-        margin-bottom: 50px;
-        margin-top: 30px;
-      }
-  }
-  
-  .randomNumber{
-	font-size: 48px;
-    text-align: center;
-    padding-top: 75px;
-    width: 150px;
-    position: relative;
-    top: -100px;
-    height: 150px;
-    left: -5px;
+/* Assign grid areas */
+#crystal-one { grid-area: c1; }
+#crystal-two { grid-area: c2; }
+#crystal-three { grid-area: c3; }
+#crystal-four { grid-area: c4; }
+.randomNumber { grid-area: random; }
+.userNumber { grid-area: user; }
+
+/* Crystal buttons */
+.crystal {
+  background-color: #ccc;
+  border-radius: 25px;
+  width: 100%;
+  max-width: 150px;
+  aspect-ratio: 1 / 1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+  text-align: center;
 }
 
-.userNumber{
-	font-size: 48px;
-    text-align: center;
-    width: 150px;
-    position: absolute;
-    /* top: -100px; */
-    height: 150px;
-	/* left: 100px; */
-	float: right;
-    padding-top: 75px;
+/* Crystal images */
+.crystalimg {
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
 }
 
-  section {
-   height: 175px;
-   background-color: #ffffff;
-   border-radius: 25px;
-   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
-  
-  article{
-   color: #ffffff;
-   text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
-  }
-  
-  .jumbotron{
-   text-align:left;
-  }
-  .panel-heading{
-   text-align:center;
-  
-  }
-  
-  .number{
-   font-size: 48px;
-   text-align: center;
-  
-  }
-  
-  .crystal{
-   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
-  
-  /* .thumbnail{
-   border-radius: 25px;
-   margin-left: 45px;
-   margin-right: 45px;
-  } */
-  .crystalimg{
-	width: auto;
-	height: 95px;
-	padding-left: 15%;
-	padding-right: 20%;
-  }
-  
-
-.crystalOne{
-	border-radius: 25px;
-	height: 150px;
-	width: 150px;
-	position: absolute;
-    margin-top: -237px;
-    margin-left: -146px;
+/* Score panels */
+.randomNumber,
+.userNumber {
+  font-size: 32px;
+  text-align: center;
+  width: 100%;
+  max-width: 150px;
+  height: 150px;
+  background-color: #fff;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding-top: 2rem;
 }
 
-.crystalTwo{
-	border-radius: 25px;
-	height: 150px;
-	width: 150px;
-	position: absolute;
-    margin-top: -74px;
-    margin-left: 26px;
-}
+/* Responsive tweaks for small screens */
+@media (max-width: 600px) {
+  #crystalgame {
+    grid-template-areas:
+      "c1 c2"
+      "c3 c4"
+      "random user";
+  }
 
-.crystalThree{
-	border-radius: 25px;
-	height: 150px;
-	width: 150px;
-	position: absolute;
-    margin-top: -74px;
-    margin-left: -146px;
-}
+  .crystal {
+    max-width: 120px;
+  }
 
-.crystalFour{
-	border-radius: 25px;
-	height: 150px;
-	width: 150px;
-	position: absolute;
-    margin-top: -237px;
-    margin-left: 26px;
-	text-align: center;
-}
-
-
-.caption{
-	text-align: center;
-}
-
-
-/* .pTwo {
-	margin-top: 25px;
-} */
-
-h3 {
-	margin-top: 4px;
-    margin-bottom: -83px;
+  .randomNumber,
+  .userNumber {
+    max-width: 120px;
     font-size: 20px;
+    padding: 10px;
+  }
 }
 
-h4 {
-    margin-top: 4px;
-    margin-bottom: -83px;
-    font-size: 20px;
+/* General styling */
+.panel-heading h4 {
+  font-size: 20px;
+  margin: 0;
+  padding: 0.5rem 0;
+  font-weight: bold;
+}
+
+.pTwo {
+
+  font-size: 40px;
+
+}
+
+section {
+  height: auto;
 }
 
 .lead {
-    color: white;
-    text-align: center;
-    margin-top: 103px;
-    font-size: 1.25rem;
-    font-weight: 300;
-  }
-  
+  color: white;
+  text-align: center;
+  margin-top: 103px;
+  font-size: 1.25rem;
+  font-weight: 300;
+}
 
-  .modal-content {
-    background: #6d6d6d;
-  }
-  
-  .modal-header {
-    background-color: rgb(190, 76, 41);
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  }
-  
-  .modal-body {
-    color: white;
-  }
-  
-  
+.modal-content {
+  background: #6d6d6d;
+}
+
+.modal-header {
+  background-color: rgb(190, 76, 41);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.modal-body {
+  color: white;
+}
+
+
+
+
+
+
+h3 {
+  margin-top: 4px;
+  margin-bottom: -83px;
+  font-size: 20px;
+}
+
+h4 {
+  margin-top: 4px;
+  margin-bottom: -83px;
+  font-size: 20px;
+}
+
+.lead {
+  color: white;
+  text-align: center;
+  margin-top: 103px;
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+
+.modal-content {
+  background: #6d6d6d;
+}
+
+.modal-header {
+  background-color: rgb(190, 76, 41);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.modal-body {
+  color: white;
+}

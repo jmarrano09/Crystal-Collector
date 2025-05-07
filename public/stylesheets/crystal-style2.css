@@ -1,0 +1,325 @@
+/* ============================  CRYSTAL GAME  ========================== */
+
+
+/* .playgames{
+	margin: 0px;
+	padding: 130px 45px;
+	height: 600px;
+    width: 960px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 30px;
+  } */
+
+
+
+/* .bgTest {
+    background-image: url(../images/pixelated_bg600.gif);
+    height: 600px;
+    width: 960px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: none;
+    filter: drop-shadow(1px 5px 24px #0000008f);
+    border:solid 15px #555; 
+    box-shadow: 0px 0px 20px #999;
+    border-radius: 5px;
+    background-color: #212121;
+  
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    
+} */
+
+#crystalgame {
+    background-image: url(../images/pixelated_bg600.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #212121;
+    border: solid 10px #555;
+    box-shadow: 0px 0px 20px #999;
+    border-radius: 5px;
+    max-width: 960px;
+    margin: 30px auto 50px auto;
+    padding: 2rem;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+@media (max-width: 600px) {
+
+
+
+  .randomNumber,
+  .userNumber {
+    width: 100px;
+    font-size: 24px;
+    padding-top: 1rem;
+  }
+}
+
+
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .crystalimg {
+    width: auto;
+    height: 65px !important;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+
+  .crystalOne {
+
+    height: 100px !important;
+    width: 100px !important;
+    position: absolute;
+    margin-top: -130px;
+    /* margin-left: -146px; */
+    /* top: 5%; */
+    left: 45% !important;
+  }
+
+  .crystalTwo {
+
+    height: 100px !important;
+    width: 100px !important;
+    position: absolute;
+    margin-top: 38px;
+    margin-left: 26px;
+  }
+
+  .crystalThree {
+
+    height: 100px !important;
+    width: 100px !important;
+    position: absolute;
+    margin-top: 38px;
+    margin-left: -146px;
+  }
+
+  .crystalFour {
+
+    height: 100px !important;
+    width: 100px !important;
+    position: absolute;
+    margin-top: -130px;
+    left: 65% !important;
+  }
+
+  /* .randomNumber {
+    font-size: 48px;
+    text-align: center;
+    padding-top: 75px;
+    height: 100px !important;
+    width: 100px !important;
+    position: relative;
+    top: 20px;
+   left: 20px;
+  } */
+}
+
+
+
+
+
+/* Container styles */
+#crystalgame2 {
+  background-image: url(../images/pixelated_bg600.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #212121;
+  border: solid 10px #555;
+  box-shadow: 0px 0px 20px #999;
+  border-radius: 5px;
+  max-width: 960px;
+  margin: 30px auto 50px auto;
+  padding: 2rem;
+  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.crystal {
+    background-color: #ccc;
+    border-radius: 25px;
+    width: 22%;
+    aspect-ratio: 1 / 1;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2), 0 6px 20px rgba(0,0,0,0.19);
+  }
+  
+
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  #crystalgame2 {
+    padding: 1rem;
+  }
+
+  .crystal {
+    width: 40%;
+  }
+}
+
+
+
+
+.randomNumber {
+  font-size: 48px;
+  text-align: center;
+  padding-top: 75px;
+  width: 150px;
+  height: 150px;
+  /* position: relative;
+  top: 20px;
+
+  left: 20px; */
+}
+
+.userNumber {
+    font-size: 48px;
+    text-align: center;
+    padding-top: 75px;
+    width: 150px;
+    height: 150px;
+  /* position: absolute;
+  top: 191px;
+
+  left: 33px;
+  padding-top: 75px; */
+}
+
+.panel-heading h4 {
+    padding-top: 0px;
+}
+
+section {
+  height: 175px;
+  background-color: #ffffff;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+article {
+  color: #ffffff;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.jumbotron {
+  text-align: left;
+}
+
+.panel-heading {
+  text-align: center;
+
+
+}
+
+.number {
+  font-size: 48px;
+  text-align: center;
+
+}
+
+
+
+.crystalimg {
+  width: auto;
+  height: 95px;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+
+.crystalOne {
+  border-radius: 25px;
+  height: 150px;
+  width: 150px;
+  /* position: absolute;
+  margin-top: -130px;
+
+  left: 35%; */
+}
+
+
+.crystalTwo {
+  border-radius: 25px;
+  height: 150px;
+  width: 150px;
+  /* position: absolute;
+  margin-top: 38px;
+  margin-left: 26px; */
+}
+
+.crystalThree {
+  border-radius: 25px;
+  height: 150px;
+  width: 150px;
+  /* position: absolute;
+  margin-top: 38px;
+  margin-left: -146px; */
+}
+
+.crystalFour {
+  border-radius: 25px;
+  height: 150px;
+  width: 150px;
+  /* position: absolute;
+  margin-top: -130px; */
+  /* margin-left: -146px; */
+  /* top: 5%; */
+  /* left: 55%; */
+}
+
+
+
+
+h3 {
+  margin-top: 4px;
+  margin-bottom: -83px;
+  font-size: 20px;
+}
+
+h4 {
+  margin-top: 4px;
+  margin-bottom: -83px;
+  font-size: 20px;
+}
+
+.lead {
+  color: white;
+  text-align: center;
+  margin-top: 103px;
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+
+.modal-content {
+  background: #6d6d6d;
+}
+
+.modal-header {
+  background-color: rgb(190, 76, 41);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.modal-body {
+  color: white;
+}

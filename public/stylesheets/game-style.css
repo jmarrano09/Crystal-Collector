@@ -74,15 +74,17 @@ article{
     background-image: url(../images/pixelated_bg6_cropped.gif);
     height: 600px;
     width: 960px;
-    background-repeat: no-repeat;
-    background-size: cover;
-	float: none;
-    filter: drop-shadow(1px 5px 24px #0000008f);
-
-    border-radius: 5px;
-  
-	
-    /* Positioning */
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-color: #212121;
+	border: solid 10px #555;
+	box-shadow: 0px 0px 20px #999;
+	border-radius: 5px;
+	max-width: 960px;
+	height: 600px;
+	margin: 30px auto 50px auto;
+	padding: 2rem;
     margin: 0 auto;
     text-align: center;
 	margin-bottom: 50px;
